@@ -43,7 +43,7 @@ Given below are the details about the aws resources created in the source and de
 
 
 
- **File name : acct2-destination-iot-environment.yaml**
+ **File name : acct2-destination-template.yaml**
 
   1. 	Acct2 cloud formation template defines infrastructure needed in Destination account.
 
@@ -71,7 +71,7 @@ Given below are the details about the aws resources created in the source and de
 
 
 
-**File name : acct1-source-iot-environment.yaml**
+**File name : acct1-source-template.yaml**
 
 
   1.  Acc1 cloud formation template defines infrastructure needed in source account.
@@ -90,7 +90,7 @@ Given below are the details about the aws resources created in the source and de
 
 
 
-**Getting Started: Creating the stack via CFTs**
+**Getting Started: Creating the stack via SAM Deploy / CFTs**
 
 
    1. We will set up an application stack in both the aws accounts by executing CFTs.
@@ -103,6 +103,12 @@ Given below are the details about the aws resources created in the source and de
    4. CFTs can be executed via AWS CLI or from Cloud Formation Service in AWS console.
       Detailed screen shots are included for both the approaches with step by step details.
 
+**Procedure to Execute Cloud Formation Templates via SAM Deployment**
+
+      1. Set Up your local environment to support AWS SAM CLI.
+        - Follow instructions listed here https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html.  
+        - Build your application : sam build --template <TemplateName>.yaml
+        - deploy your application : sam deploy --guided
 
 
 **Execution Steps : We are now ready to deploy CFTs**
@@ -120,12 +126,6 @@ Given below are the details about the aws resources created in the source and de
 2. Run source environment CFT after replacing parameters in template with appropriate values i.e. account numbers, queue ARN, queue URL etc.
 
 
-**Procedure to Execute Cloud Formation Templates**
-
-1. Set Up your local environment to support AWS SAM CLI.
-  - Follow instructions listed here https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html.  
-  - Build your application : sam build
-  - deploy your application : sam deploy --guided
 
 
 2. **Via AWS CLI**
